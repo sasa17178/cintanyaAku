@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Love for You</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      padding-top: 50px;
+    }
+
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      margin: 0 auto;
+      transform: rotate(-45deg);
+      background: red;
+      animation: pulse 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: rotate(-45deg) scale(1); }
+      50% { transform: rotate(-45deg) scale(1.1); }
+      100% { transform: rotate(-45deg) scale(1); }
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #ffcccc;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <div class="message">Terima kasih sudah hadir di hidupku ❤️</div>
+</body>
+</html>
